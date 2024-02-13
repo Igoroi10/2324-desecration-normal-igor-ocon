@@ -47,7 +47,7 @@ const gameLoop = (villain, hero) => {
 }
 
 const initialPresentation =  (villain, hero) => {
-    console.log("You are being attack by Zarate, also known as Junkpile, and when you thought your time was finished" + hero.name+ "comes to your rescue!!!!")
+    console.log("You are being attack by Zarate, also known as Junkpile, and when you thought your time was finished " + hero.name+ " comes to your rescue!!!!")
     console.log("-------------------------ZARATE-------------------------------")
     console.log("NAME: Zarate, the villain")
     console.log("ALIAS: " + villain.name)
