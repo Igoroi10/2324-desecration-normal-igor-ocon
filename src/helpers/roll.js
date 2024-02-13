@@ -7,3 +7,5 @@ const roll = (diceNum, min, max) =>{
 
     return finalResult
 }
+
+export default roll
