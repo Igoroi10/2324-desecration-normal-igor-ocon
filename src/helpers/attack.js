@@ -67,7 +67,7 @@ const crit = (origin, target, diceRoll) => {
     const totalDamage = normalDamage+critDamage
     target.hp -= totalDamage
 
-    console.log("A battle critical hit!!!!! " + origin.name + ", strikes fiercely to " + target.name + " , dealing " +totalDamage+ "damage, the agony screams can be heard from the deepest mine to the tallest mountain!")
+    console.log("A battle critical hit!!!!! " + origin.name + ", strikes fiercely to " + target.name + " , dealing " +totalDamage+ " damage, the agony screams can be heard from the deepest mine to the tallest mountain!")
 }
 
 export default attack

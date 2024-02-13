@@ -17,13 +17,14 @@ const mainFunction = async () => {
     villainZarate.hp = villainZarate.powerstats.strength*10>666?666:villainZarate.powerstats.strength*10
     superHero.hp = superHero.powerstats.strength*10>666?666:superHero.powerstats.strength*10
 
+    initialPresentation(villainZarate, superHero)
+
     gameLoop(villainZarate, superHero)
 
 }
 
 const gameLoop = (villain, hero) => {
-    console.log("------------------------------------")
-    console.log("------------ TURN START ------------")
+    console.log("**************************************** TURN START ********************************************************")
     if(villain.powerstats.combat+villain.powerstats.intelligence > hero.powerstats.combat+hero.powerstats.intelligence){
         attack(villain, hero)
         console.log("------------------------------------")
@@ -35,14 +36,52 @@ const gameLoop = (villain, hero) => {
         attack(villain, hero)
     }
 
+    remainingLifeLog(villain, hero)
 
+    console.log("************************************************************************************************")
+    
     const finish = lifecheck(villain, hero)
 
     if(!finish)
         gameLoop(villain,hero)
 }
 
+const initialPresentation =  (villain, hero) => {
+    console.log("You are being attack by Zarate, also known as Junkpile, and when you thought your time was finished" + hero.name+ "comes to your rescue!!!!")
+    console.log("-------------------------ZARATE-------------------------------")
+    console.log("NAME: Zarate, the villain")
+    console.log("ALIAS: " + villain.name)
+    console.log("INT: " + villain.powerstats.intelligence)
+    console.log("STR: " + villain.powerstats.strength)
+    console.log("DUR: " + villain.powerstats.durability)
+    console.log("SPE: " + villain.powerstats.speed)
+    console.log("POW: " + villain.powerstats.power)
+    console.log("COM: " + villain.powerstats.combat)
+    console.log("HP: " + villain.hp)
+    console.log("--------------------------------------------------------------")
+    console.log("-------------------------YOUR HERO-------------------------------")
+    console.log("NAME: " + hero.name)
+    console.log("INT: " + hero.powerstats.intelligence)
+    console.log("STR: " + hero.powerstats.strength)
+    console.log("DUR: " + hero.powerstats.durability)
+    console.log("SPE: " + hero.powerstats.speed)
+    console.log("POW: " + hero.powerstats.power)
+    console.log("COM: " + hero.powerstats.combat)
+    console.log("HP: " + hero.hp)
+    console.log("--------------------------------------------------------------")
+}
 
+const remainingLifeLog = (villain, hero) => {
+    console.log("-------------------------ZARATE-------------------------------")
+    console.log("NAME: Zarate, the villain")
+    console.log("ALIAS: " + villain.name)
+    console.log("HP: " + villain.hp)
+    console.log("--------------------------------------------------------------")
+    console.log("-------------------------YOUR HERO-------------------------------")
+    console.log("NAME: " + hero.name)
+    console.log("HP: " + hero.hp)
+    console.log("--------------------------------------------------------------")
+}
 
 
 
