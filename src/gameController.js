@@ -2,6 +2,7 @@ import roll from "./helpers/roll.js"
 import getHeroes from "./gameService.js"
 
 import findZarate from "./helpers/findZarate.js";
+import selectHero from "./helpers/selectHero.js";
 
 const mainFunction = async () => {
     const heroList = await getHeroes();
@@ -10,7 +11,9 @@ const mainFunction = async () => {
 
     const villainZarate = findZarate(heroList)
 
-    console.log(villainZarate)
+    const superHero = selectHero(heroList)
+
+    console.log(superHero)
 
 }
 
