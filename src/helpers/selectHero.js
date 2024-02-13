@@ -1,6 +1,5 @@
 const selectHero = (heroList) => {
     const hero = heroChoice(0, 562, heroList)
-
     return hero
 }
 
